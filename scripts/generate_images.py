@@ -26,7 +26,7 @@ noise = tf.random.normal([1, 100])
 generated_image = generator(noise, training=False)
 
 # Asegurar que la forma del tensor sea tridimensional
-generated_image = tf.squeeze(generated_image, axis=0)  # Eliminar la dimensión de lote si es necesario
+generated_image = tf.squeeze(generated_image, axis=0)  # Eliminar la dimensión de lote si es necesario hola navho
 
 # Asegurar que la forma de la imagen sea tridimensional
 if len(generated_image.shape) == 2:
