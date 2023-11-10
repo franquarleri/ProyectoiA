@@ -2,6 +2,13 @@ import tensorflow as tf
 from tensorflow.keras import layers
 import os
 
+import warnings
+
+# Desactivar advertencias de TensorFlow
+warnings.filterwarnings("ignore", category=FutureWarning)
+warnings.filterwarnings("ignore", category=Warning)
+
+# Resto del código de tu script...
 # Definición del generador
 generator = tf.keras.Sequential([
     layers.Dense(7 * 7 * 256, use_bias=False, input_shape=(100,)),
@@ -36,7 +43,7 @@ if len(generated_image.shape) == 2:
 os.makedirs('images', exist_ok=True)
 
 # Guardar la imagen generada en la carpeta 'images'
-tf.keras.preprocessing.image.save_img('images/generat_image.png', generated_image * 0.5 + 0.5)
+tf.keras.preprocessing.image.save_img('images/test.png', generated_image * 0.5 + 0.5)
 
 
 
