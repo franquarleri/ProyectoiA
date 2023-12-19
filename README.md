@@ -1,1 +1,1 @@
-Generador de imagenes usando machine learning y IA.
+Image generator using machine learning and AI.
